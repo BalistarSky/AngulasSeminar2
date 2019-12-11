@@ -1,0 +1,12 @@
+.images{
+    display: flex;
+    width: calc(100vw -20px);
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.images app-grid-item{
+    padding: 10px;
+    width: 200px;
+}

@@ -1,0 +1,13 @@
+<!--Wdh-->
+<div [style.color]="'red'">Hello</div>
+
+<input [(ngModel)] = "eineAndereVariable" (keyup.enter) ="$.event.target.value = ''; machWas()">
+<button (click) = "Suchen()">Suchen</button>
+<div>{{eineAndereVariable}}</div>
+<div [style.color] = "zahl % 2 == 0 ? 'red' : 'blue'"> {{eineAndereVariable}} </div>
+
+
+{{(uhrzeit | async)?.uhrzeit}}
+
+<app-grid-view></app-grid-view>
+

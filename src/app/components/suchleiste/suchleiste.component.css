@@ -1,0 +1,17 @@
+
+.suchleiste-container{
+  height: 80px;
+  width: 100vw;
+  display:flex;
+  align-content: center; 
+}
+
+.suchleiste {
+    width: 500px;
+    height: 30px;
+    display: flex;
+  
+    justify-content: center;
+    align-content: center;
+    margin: auto;  
+  }

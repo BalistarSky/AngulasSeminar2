@@ -1,0 +1,19 @@
+<div class="post-container">
+    <div class="post-img-container">
+        <button class="button" (click)="loadPrev()">
+            <i class="fas fa-arrow-circle-left"></i>
+        </button>
+        <app-post-img [img]="post" class="post-img"></app-post-img>
+        <button class="button" (click)="loadNext()">
+            <i class="fas fa-arrow-circle-right"></i>
+        </button>
+    </div>
+
+    <div class="tag-container">
+        <p class="tag" *ngFor="let tag of post?.tags">{{tag}}</p>
+    </div>  
+
+    <div>
+        <span>KOMMENTAR</span>
+    </div>
+</div>

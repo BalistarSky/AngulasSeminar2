@@ -1,0 +1,64 @@
+<div class="main-nav">
+    <div class="navbar">
+        <div class="brand">
+          Imageboard
+        </div>
+        <div class="nav-items">
+           <!--  <i class="fas fa-camera"></i>
+            <a class="item" href="#">Picular</a>
+            <a class="item" href="#">Neu</a>
+            <a class="item" href="#">Beliebt</a>
+            <a class="item" href="#">Memes</a>
+            <a class="item" href="#">Impressum</a>     -->
+            <i class="fas fa-camera"></i>
+            <a class="item" *ngFor="let item of navbarItems">{{item.text}}</a>
+        </div> 
+        <div>
+          <div class="item">Einloggen</div>
+        </div>  
+    </div>
+</div>
+                                                                                                                                                                               
+
+<img [src] = "" >
+
+
+
+
+
+    
+<div *ngIf="false">
+  <h1>Uebungen</h1>
+    <p>nav-bar works!  </p>
+
+    <input [value]="hallo" (input)="hallo = $event.target.value"> <!-- 2 mal one-way-Data-Binding-->
+    
+    <input [(ngModel)]="hallo">
+
+    <input [(ngModel)]="eineandereVarialbe" (keyup.enter) = "$event.target.value =''; machWas()">
+    <div>
+      {{eineandereVarialbe}} => {{zahl}}
+     </div>
+    <!--
+    two-way-Data-Binding, dafür muss man FormsModule in app.module.ts importieren
+    wenn input geändert wird, ändert sich gleichzeitig die variable, ändert sich die variable, 
+    dann auch gleichzeitig der input
+    -->
+    
+    
+    <p>
+      {{hallo}}
+      <!--ruft Variable aus der ts Datei-->
+      <button (click)="sayHello()">Drück mich</button>
+     
+    </p>
+    
+    
+    <input (input)= "hallooooho">
+    
+    
+    <!--<button ((click)="myClick(event)")></button>
+     {{irgendwas.hallo}}
+    -->
+</div>
+

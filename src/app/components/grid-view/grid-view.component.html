@@ -1,0 +1,23 @@
+<div class="images">
+
+    <!--Erstellt soviele Items wie im Array in der grid-view-component.ts. drin sind-->
+    <app-grid-item 
+    *ngFor="let element of posts"  
+    [post] = "element"
+    ></app-grid-item>
+
+   
+   <!--<app-grid-item *ngFor="let item of [1,2,3,4,5,6,7]">
+        {{item}}
+    </app-grid-item>
+    <div *ngIf="images == null">
+        keine Bilder.
+    </div>
+    <div *ngIf="images != 0">
+        Bilder vorhanden
+    </div>
+
+    <button (click)="images = 0">null</button>
+    <button (click)="images != 0">nicht null</button>
+    --> 
+</div>

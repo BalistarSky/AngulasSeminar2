@@ -1,0 +1,7 @@
+.header-container { 
+    background-image: url("/assets/img/background.jpg");
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}

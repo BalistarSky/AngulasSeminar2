@@ -1,0 +1,25 @@
+.post-container{
+    margin: 20px auto;
+    height: auto;
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+}
+.post-img-container{
+    margin: auto;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between 
+}
+.button{
+    background-color: rgba(255, 128, 255, 0)
+}
+
+.tag-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:  10px;
+}
