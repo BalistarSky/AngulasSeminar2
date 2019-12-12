@@ -9,9 +9,10 @@ import { IPost } from 'src/app/interfaces/IPost';
 })
 export class GridItemComponent implements OnInit {
 
-  @Input()  // Input()gilt nur für eine Zeile, also die nächste Klasse, bei weiteren Variablen von außen wieder verwenden um zu importieren--> metadata
-  public post: IPost;
-  
+  // Input() gilt nur für eine Zeile,
+  // also die nächste Klasse, bei weiteren Variablen von außen wieder verwenden um zu importieren--> metadata
+  @Input()
+  public testImage: IPost;
 
   constructor() { }
 

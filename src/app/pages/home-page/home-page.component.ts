@@ -46,9 +46,9 @@ export class HomePageComponent implements OnInit {
     });
 
 
-    this.uhrzeit = new Observable<object>(obs => {
+    this.uhrzeit = new Observable<object>(observer => {
       setInterval(() => {
-        obs.next({
+        observer.next({
           datum: new Date(Date.now()).toString(),
           uhrzeit: new Date(Date.now()).toString()
         });

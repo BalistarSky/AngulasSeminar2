@@ -6,15 +6,23 @@
     justify-content: center;
     align-items: center;
 }
-.post-img-container{
+.navigation-container{
     margin: auto;
-    max-height: 300px;
     display: flex;
     align-items: center;
     justify-content: space-between 
 }
+.image-container{
+    margin: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+}
 .button{
-    background-color: rgba(255, 128, 255, 0)
+    background-color: rgba(255, 128, 255, 0);
+    border: none;
 }
 
 .tag-container{
@@ -22,4 +30,17 @@
     flex-direction: row;
     justify-content: center;
     margin:  10px;
+}
+.tag{
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #1a1c1b;
+    border-radius: 20px;
+}
+
+.comment-container{
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #38423c;
+    width: 40%;
 }

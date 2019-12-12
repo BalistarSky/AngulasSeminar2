@@ -1,9 +1,10 @@
 <div class="images">
 
     <!--Erstellt soviele Items wie im Array in der grid-view-component.ts. drin sind-->
+   
     <app-grid-item 
-    *ngFor="let element of posts"  
-    [post] = "element"
+        *ngFor="let element of (images | async )"  
+        [testImage] = "element"
     ></app-grid-item>
 
    

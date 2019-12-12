@@ -17,6 +17,9 @@ import { PostComponent } from './components/post/post.component';
 import { PostPageComponent } from './pages/post-page/post-page.component';
 import { PostImgComponent } from './components/post/post-img/post-img.component';
 import { TestService } from './services/test.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './services/api.service';
+import { PostserviceService } from './services/postservice.service';
 
 @NgModule({
   declarations: [
@@ -37,8 +40,9 @@ import { TestService } from './services/test.service';
     AppRoutingModule,
     FormsModule, // für two-way Databinding
     NgbModule,
+    HttpClientModule
   ],
-  providers: [TestService], // hier müssen die services rein!
+  providers: [TestService, PostserviceService, ApiService], // hier müssen die services rein!
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,14 @@
+.image{
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.image:hover {
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    height: auto !important;
+    width: 80vw !important;
+    max-height: unset;
+    max-width: unset;
+}

@@ -1,19 +1,26 @@
 <div class="post-container">
-    <div class="post-img-container">
+    <div class="navigation-container">
         <button class="button" (click)="loadPrev()">
             <i class="fas fa-arrow-circle-left"></i>
         </button>
-        <app-post-img [img]="post" class="post-img"></app-post-img>
+        <div class="image-container"> 
+            <app-post-img [img]="(post | async )" class="post-img"></app-post-img>
+        </div>
         <button class="button" (click)="loadNext()">
             <i class="fas fa-arrow-circle-right"></i>
         </button>
     </div>
 
     <div class="tag-container">
-        <p class="tag" *ngFor="let tag of post?.tags">{{tag}}</p>
-    </div>  
+        <p class="tag" *ngFor="let element of (post | async)?.tags">
+            {{element.tag}}
+        </p>
+    </div>
 
-    <div>
-        <span>KOMMENTAR</span>
+    <div class="comment-container" *ngFor="let element of (post | async)?.comments">
+        <span style="margin: auto;">Comment</span>
+        <hr>
+        <p>Name: {{element.name}}</p>
+        <p>Kommentar: {{element.content}}</p>
     </div>
 </div>

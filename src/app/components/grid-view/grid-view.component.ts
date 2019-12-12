@@ -1,6 +1,8 @@
 import { Component, OnInit, ɵINJECTOR_IMPL__POST_R3__ } from '@angular/core';
 import { IImage } from 'src/app/interfaces/IImage';
 import { IPost } from 'src/app/interfaces/IPost';
+import { ApiService } from 'src/app/services/api.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-grid-view',
@@ -9,38 +11,15 @@ import { IPost } from 'src/app/interfaces/IPost';
 })
 export class GridViewComponent implements OnInit {
 
-  public posts: Array<IPost> = []; // Datenimport der Posts aus items.json 
+  public images: Observable<IPost[]>; // von Fabian, speichern Observable vom Http cient ab!
 
-  constructor() { }
+
+  constructor(private apiService: ApiService) { }
 
   async ngOnInit() {
 
-    const data = await (await fetch('/assets/items.json')).json();
-    for (const post of data) {
-      const newPost: IPost = {
-        id: post.id,
-        image: post.url,
-        user: post.author,
+    this.apiService.getPictures().subscribe(x => console.log(x)); // Loggen des Array --> siehe console google chrome
 
-        info: {
-          tags: [],
-          comments: []
-        }
-      }
-
-      for (const element of post.tags) {
-        newPost.info.tags.push({
-          tag: element.tag
-        });
-      }
-
-      for (const element of post.comments) {
-        newPost.info.comments.push({
-          content: element.content,
-          name: element.name
-        });
-      }
-      this.posts.push(newPost);
-    }
+    this.images = this.apiService.getPictures();
   }
 }

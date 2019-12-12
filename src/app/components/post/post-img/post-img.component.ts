@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IImage } from 'src/app/interfaces/IImage';
 import { IPost } from 'src/app/interfaces/IPost';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-post-img',
@@ -9,16 +10,11 @@ import { IPost } from 'src/app/interfaces/IPost';
 })
 export class PostImgComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   @Input()
   public img: IPost;
 
   ngOnInit() {
   }
-
-
-
-
-  
 }
